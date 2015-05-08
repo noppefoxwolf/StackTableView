@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray*images;
+}
 
 @end
 
@@ -16,12 +18,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor redColor];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    images = [NSMutableArray new];
+    for (int i=0; i<7; i++) {
+        NSString*file = [NSString stringWithFormat:@"%d.jpg",i];
+        [images addObject:[UIImage imageNamed:file]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell*cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%ld cell",(long)indexPath.row];
+    UIImageView*iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    iv.image = images[indexPath.row%7];
+    [cell.contentView addSubview:iv];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 100;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200;
 }
 
 @end

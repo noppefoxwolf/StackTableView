@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackTableView.h"
+
 
 @interface ViewController : UIViewController
-
-
+@property (strong, nonatomic) IBOutlet StackTableView *tableView;
 @end
 

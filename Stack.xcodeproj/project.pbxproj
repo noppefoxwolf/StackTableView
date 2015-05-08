@@ -14,6 +14,15 @@
 		D71F960C1AFB809500C4341E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71F960B1AFB809500C4341E /* Images.xcassets */; };
 		D71F960F1AFB809600C4341E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71F960D1AFB809500C4341E /* LaunchScreen.xib */; };
 		D71F961B1AFB809600C4341E /* StackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71F961A1AFB809600C4341E /* StackTests.m */; };
+		D71F96291AFB8BF800C4341E /* StackTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71F96281AFB8BF800C4341E /* StackTableView.m */; };
+		D7289C871AFCD18600B1873D /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C7F1AFCD18600B1873D /* 0.jpg */; };
+		D7289C881AFCD18600B1873D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C801AFCD18600B1873D /* 1.jpg */; };
+		D7289C891AFCD18600B1873D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C811AFCD18600B1873D /* 2.jpg */; };
+		D7289C8A1AFCD18600B1873D /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C821AFCD18600B1873D /* 3.jpg */; };
+		D7289C8B1AFCD18600B1873D /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C831AFCD18600B1873D /* 4.jpg */; };
+		D7289C8C1AFCD18600B1873D /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C841AFCD18600B1873D /* 5.jpg */; };
+		D7289C8D1AFCD18600B1873D /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C851AFCD18600B1873D /* 6.jpg */; };
+		D7289C8E1AFCD18600B1873D /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7289C861AFCD18600B1873D /* 7.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +49,16 @@
 		D71F96141AFB809600C4341E /* StackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71F96191AFB809600C4341E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71F961A1AFB809600C4341E /* StackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackTests.m; sourceTree = "<group>"; };
+		D71F96271AFB8BF800C4341E /* StackTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackTableView.h; sourceTree = "<group>"; };
+		D71F96281AFB8BF800C4341E /* StackTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackTableView.m; sourceTree = "<group>"; };
+		D7289C7F1AFCD18600B1873D /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		D7289C801AFCD18600B1873D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D7289C811AFCD18600B1873D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		D7289C821AFCD18600B1873D /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		D7289C831AFCD18600B1873D /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		D7289C841AFCD18600B1873D /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		D7289C851AFCD18600B1873D /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		D7289C861AFCD18600B1873D /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +100,7 @@
 		D71F95FD1AFB809500C4341E /* Stack */ = {
 			isa = PBXGroup;
 			children = (
+				D7289C7E1AFCD17500B1873D /* Asset */,
 				D71F96021AFB809500C4341E /* AppDelegate.h */,
 				D71F96031AFB809500C4341E /* AppDelegate.m */,
 				D71F96051AFB809500C4341E /* ViewController.h */,
@@ -89,6 +109,8 @@
 				D71F960B1AFB809500C4341E /* Images.xcassets */,
 				D71F960D1AFB809500C4341E /* LaunchScreen.xib */,
 				D71F95FE1AFB809500C4341E /* Supporting Files */,
+				D71F96271AFB8BF800C4341E /* StackTableView.h */,
+				D71F96281AFB8BF800C4341E /* StackTableView.m */,
 			);
 			path = Stack;
 			sourceTree = "<group>";
@@ -117,6 +139,21 @@
 				D71F96191AFB809600C4341E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7289C7E1AFCD17500B1873D /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				D7289C7F1AFCD18600B1873D /* 0.jpg */,
+				D7289C801AFCD18600B1873D /* 1.jpg */,
+				D7289C811AFCD18600B1873D /* 2.jpg */,
+				D7289C821AFCD18600B1873D /* 3.jpg */,
+				D7289C831AFCD18600B1873D /* 4.jpg */,
+				D7289C841AFCD18600B1873D /* 5.jpg */,
+				D7289C851AFCD18600B1873D /* 6.jpg */,
+				D7289C861AFCD18600B1873D /* 7.jpg */,
+			);
+			name = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +236,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7289C8E1AFCD18600B1873D /* 7.jpg in Resources */,
+				D7289C8B1AFCD18600B1873D /* 4.jpg in Resources */,
+				D7289C891AFCD18600B1873D /* 2.jpg in Resources */,
+				D7289C871AFCD18600B1873D /* 0.jpg in Resources */,
+				D7289C8C1AFCD18600B1873D /* 5.jpg in Resources */,
+				D7289C8D1AFCD18600B1873D /* 6.jpg in Resources */,
 				D71F960A1AFB809500C4341E /* Main.storyboard in Resources */,
 				D71F960F1AFB809600C4341E /* LaunchScreen.xib in Resources */,
 				D71F960C1AFB809500C4341E /* Images.xcassets in Resources */,
+				D7289C8A1AFCD18600B1873D /* 3.jpg in Resources */,
+				D7289C881AFCD18600B1873D /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71F96291AFB8BF800C4341E /* StackTableView.m in Sources */,
 				D71F96071AFB809500C4341E /* ViewController.m in Sources */,
 				D71F96041AFB809500C4341E /* AppDelegate.m in Sources */,
 				D71F96011AFB809500C4341E /* main.m in Sources */,
@@ -416,6 +462,7 @@
 				D71F96201AFB809600C4341E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D71F96211AFB809600C4341E /* Build configuration list for PBXNativeTarget "StackTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +471,7 @@
 				D71F96231AFB809600C4341E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
