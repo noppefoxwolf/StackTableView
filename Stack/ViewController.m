@@ -36,12 +36,14 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell*cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%ld cell",(long)indexPath.row];
-    UIImageView*iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    
+    UIImageView*iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+    iv.backgroundColor = [UIColor redColor];
     iv.image = images[indexPath.row%7];
     [cell.contentView addSubview:iv];
     return cell;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 100;
