@@ -8,11 +8,12 @@
 
 #import "StackTableView.h"
 
-@interface StackTableView ()<UITableViewDelegate>
+@interface StackTableView ()<UITableViewDelegate,UITableViewDataSource>
 @end
 
 @implementation StackTableView{
     __weak id<StackTableViewDelegate> _mDelegate;
+    __weak id<StackTableViewDataSource> _mDataSource;
     NSIndexPath*goastIndex;
     UIImageView*_goastView;
 }
@@ -35,7 +36,7 @@
 
 - (void)setup{
     self.delegate = self;
-    
+    self.dataSource = self;
     _goastView = [UIImageView new];
     _goastView.contentMode = UIViewContentModeTop|UIViewContentModeScaleAspectFit;
     self.backgroundView = _goastView;
@@ -49,12 +50,44 @@
     }
 }
 
+- (void)setDataSource:(id<UITableViewDataSource>)dataSource{
+    if (dataSource == self) {
+        [super setDataSource:dataSource];
+    }else{
+        _mDataSource = (id<StackTableViewDataSource>)dataSource;
+    }
+}
+
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([_mDelegate respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
         return [_mDelegate tableView:tableView heightForRowAtIndexPath:indexPath];
     }
     return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_mDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        return [_mDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
+    }
+}
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_mDataSource respondsToSelector:@selector(tableView:cellForRowAtIndexPath:)]) {
+        UITableViewCell*cell = [_mDataSource tableView:tableView cellForRowAtIndexPath:indexPath];
+        cell.clipsToBounds = true;
+        return cell;
+    }
+    return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if ([_mDataSource respondsToSelector:@selector(tableView:numberOfRowsInSection:)]) {
+        return [_mDataSource tableView:tableView numberOfRowsInSection:section];
+    }
+    return 0;
 }
 
 #pragma mark - UIScrollViewDelegate

@@ -14,6 +14,8 @@
 @protocol StackTableViewDelegate<UITableViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 @end
+@protocol StackTableViewDataSource <UITableViewDataSource>
+@end
 
 @interface StackTableView : UITableView
 @end

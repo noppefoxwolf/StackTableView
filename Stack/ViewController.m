@@ -34,6 +34,8 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - UITableViewDelegate and DataSource
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell*cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
@@ -41,6 +43,14 @@
     iv.backgroundColor = [UIColor redColor];
     iv.image = images[indexPath.row%7];
     [cell.contentView addSubview:iv];
+    
+    UILabel*label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2, 0, self.view.bounds.size.width, 44)];
+    NSString*text = [NSString stringWithFormat:@"index:%ld",(long)indexPath.row];
+    [label setText:text];
+    [label setTextColor: [UIColor whiteColor]];
+    label.font =[UIFont fontWithName:@"AvenirNextCondensed-Bold" size:25];
+    [cell.contentView addSubview: label];
+    
     return cell;
 }
 
@@ -51,6 +61,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 200;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    NSLog(@"touch");
 }
 
 @end
